@@ -1,0 +1,29 @@
+1.简单说明一下 原始数据已上传
+2.上传一个fq样例，放到test/OriginalData_fq(bam)文件夹里面
+
+3.fq到mat数据的过程和代码，要说明
+
+通过bwa和samtools工具比对.fq和.fa文件得到.bam格式的文件
+Compare the .fq and .fa files with the bwa and samtools tools to get .bam format files
+
+1.从bam文件中读取第21号染色体
+Read chromosome 21 from bam file
+	
+2.从bam文件中提取每个位点的read count值
+Extract the read count value of each locus from the bam file
+
+3.读取reference文件，chr21.fa
+Read the reference file, chr21.fa
+
+4.从readcount数组中获取每个bin的read depth值
+Get the read depth value of each bin from the readcount array
+
+5.使用mapq函数提取比对质量并且计算相邻bin的关联度，仿真数据用main_simulation.py，真实数据用main_real.py
+Use mapq function to extract the quality of the comparison and calculate the correlation between neighboring bins
+
+6.计算关联度
+7.生成特征值文件，格式为txt
+Generate a eigenvalue file in txt format,
+
+8.将txt保存为mat格式，代码在shengchengmat.m文件中
+Save txt as mat format, the code is in Shengchengmat.m file
